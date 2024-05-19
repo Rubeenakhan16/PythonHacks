@@ -29,6 +29,9 @@ k8s.io/cluster-autoscaler/enabled : TRUE
 ##Check the existing configurations (change your eks cluster name value).
 aws autoscaling describe-auto-scaling-groups 
 
+
+
+for the below step check if is already created if yes go and attach that policy to an role 
 #Creating an IAM policy for your service account that will allow your CA pod to interact with the autoscaling groups.
 aws iam create-policy --policy-name k8s-asg-policy --policy-document file://k8s-asg-policy.json
 
